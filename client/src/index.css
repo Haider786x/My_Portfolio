@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0c0c0c;
+    --surface: #161616;
+    --surface-2: #1e1e1e;
+    --accent: #d4a853;
+    --text: #f0ede8;
+    --text-muted: #888580;
+    --border: #262626;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-bg text-text font-sans;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  /* Light mode */
+  html.light body {
+    @apply bg-light-bg text-light-text;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border-light rounded-full;
+  }
+  html.light ::-webkit-scrollbar-track {
+    @apply bg-light-bg;
+  }
+  html.light ::-webkit-scrollbar-thumb {
+    @apply bg-light-border rounded-full;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: rgba(212, 168, 83, 0.25);
+    color: #f0ede8;
+  }
+
+  /* Focus outline */
+  :focus-visible {
+    @apply outline-none ring-1 ring-accent ring-offset-1 ring-offset-bg;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply max-w-content mx-auto px-6 md:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-wide mx-auto px-6 md:px-8;
+  }
+
+  .section {
+    @apply py-24 md:py-32;
+  }
+
+  .label {
+    @apply font-mono text-2xs uppercase tracking-widest text-text-muted;
+  }
+
+  .label-light {
+    @apply font-mono text-2xs uppercase tracking-widest text-light-text-muted;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-accent text-bg font-sans font-medium text-sm px-5 py-2.5
+    rounded transition-all duration-200 hover:bg-accent-dim active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 border border-border text-text-muted font-sans text-sm px-5 py-2.5
+    rounded transition-all duration-200 hover:border-border-light hover:text-text active:scale-95;
+  }
+
+  .light .btn-ghost {
+    @apply border-light-border text-light-text-muted hover:border-light-text hover:text-light-text;
+  }
+
+  .card {
+    @apply bg-surface border border-border rounded-lg p-6 transition-all duration-200;
+  }
+
+  .card:hover {
+    @apply border-border-light;
+  }
+
+  .light .card {
+    @apply bg-light-surface border-light-border;
+  }
+
+  .light .card:hover {
+    @apply border-light-text-muted;
+  }
+
+  .divider {
+    @apply border-t border-border;
+  }
+
+  .light .divider {
+    @apply border-light-border;
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger delays */
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Print Stylesheet */
+@media print {
+  body, html {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12px !important;
+  }
+  
+  header, footer, nav, button, kbd, .print\:hidden {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .container-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print\:border-none {
+    border: none !important;
+  }
+
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+
+  .print\:p-0 {
+    padding: 0 !important;
+  }
+
+  .print\:break-inside-avoid {
+    break-inside: avoid !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+}
+
