@@ -2,17 +2,17 @@ export const experience = [
   {
     id: 'solarwiser',
     type: 'full-time',
-    company: 'Solarwiser',
+    company: 'SolarWiser Technologies Private Limited',
     role: 'Graduate Engineer Trainee',
     period: 'July 2026 – Present',
     current: true,
     description:
-      'Contributing to engineering projects and operations as part of the graduate training program.',
+      'Supported the design and development of internal software tools, including predictive applications for solar project estimation and energy generation forecasting.',
     responsibilities: [
-      'Contributing to engineering projects and operations as part of the graduate training program.',
-      'Building scalable backend services and REST APIs.',
-      'Working on AI-powered solar analytics, performance monitoring, and prediction systems.',
-      'Developing dashboards and data visualization tools for energy insights.',
+      'Supported the design and development of internal software tools, including predictive applications for solar project estimation and energy generation forecasting.',
+      'Assisted engineering teams in identifying automation opportunities, optimizing business processes, and preparing technical project documentation.',
+      'Contributed to SEO and digital marketing initiatives to improve online visibility, and helped create technical content related to solar energy.',
+      'Aided in maintaining customer databases and generating residential solar leads to support the sales team with project conversions.',
     ],
   },
   {
@@ -23,13 +23,13 @@ export const experience = [
     period: 'April 2026 – July 2026',
     current: false,
     description:
-      'Developed a MERN-based solar power prediction and monitoring platform for managing solar installations and energy analytics.',
+      'Developed a MERN-based solar power monitoring platform to manage installations and compare predicted vs. actual energy generation.',
     responsibilities: [
-      'Developed a MERN-based solar power prediction and monitoring platform for managing solar installations and energy analytics.',
-      'Built RESTful APIs and integrated AI/ML prediction modules to generate daily, monthly, and annual solar energy forecasts using installation and weather data.',
-      'Designed interactive analytics dashboards featuring solar generation trends, prediction history, and downloadable performance reports.',
-      'Implemented data visualizations for monitoring energy output, inverter efficiency, DC/AC ratio, temperature impact, and cloud coverage.',
-      'Developed secure user management workflows including installation onboarding, report generation, and automated prediction refresh pipelines.',
+      'Developed a MERN-based solar power monitoring platform to manage installations and compare predicted vs. actual energy generation.',
+      'Integrated AI/ML modules and built RESTful APIs to forecast daily, monthly, and annual yields, achieving ~90% prediction accuracy across active sites.',
+      'Tuned prediction algorithms to deliver highly precise daily estimates for residential solar systems ranging from 1 kW to 10 kW, maintaining a tight margin of error against real-world production.',
+      'Designed interactive analytics dashboards featuring generation trends, prediction history, and downloadable performance reports.',
+      'Implemented data visualizations for monitoring energy output, inverter efficiency, and secure workflows for automated prediction pipelines.',
     ],
   },
 ];
@@ -56,28 +56,27 @@ export const education = [
 
 export const certifications = [
   {
-    id: 'nptel-stress',
-    issuer: 'NPTEL',
-    title: 'Stress Management',
-    year: '2025',
-    details: 'Certified Course Completion',
-  },
-  {
     id: 'udemy-webdev',
-    issuer: 'Udemy Colt Steele',
-    title: 'The Web Developer Bootcamp',
+    issuer: 'Udemy, Colt Steele',
+    title: 'The Web Developer Bootcamp (Full-Stack Web Development)',
     year: '2025',
     details: 'Full-Stack Web Development Certification',
   },
+  {
+    id: 'nptel-stress',
+    issuer: 'NPTEL',
+    title: 'Stress Management (Certified Course Completion)',
+    year: '2025',
+    details: 'Certified Course Completion',
+  },
 ];
 
-// Reorganized skills to match the resume's exact 5 categories
 export const skills = {
-  'Programming Languages': ['Java', 'JavaScript', 'SQL', 'HTML/CSS', 'Python'],
-  'Frameworks & Libraries': ['React.js', 'Node.js', 'Express.js', 'Redux Toolkit', 'Bootstrap', 'Tailwind CSS', 'Socket.io', 'JWT'],
-  'Databases & Platforms': ['MongoDB', 'MySQL', 'REST APIs'],
-  'Developer Tools': ['Git', 'GitHub', 'VS Code', 'Postman', 'MongoDB Compass', 'Cursor'],
   'Core CS Concepts': ['Object-Oriented Programming', 'Data Structures & Algorithms', 'Operating Systems', 'DBMS', 'Computer Networks'],
+  'Programming Languages': ['Java', 'JavaScript', 'SQL', 'HTML/CSS'],
+  'Frameworks & Libraries': ['React.js', 'Node.js', 'Express.js', 'Bootstrap', 'Tailwind CSS'],
+  'Developer Tools': ['Git', 'GitHub', 'VS Code', 'Postman', 'MongoDB Compass', 'Cursor'],
+  'Databases & Platforms': ['MongoDB', 'MySQL', 'REST APIs'],
 };
 
 export const philosophy = [
@@ -86,6 +85,7 @@ export const philosophy = [
   'Clean architecture and maintainable code always beat quick hacks.',
   'Every feature should have a purpose.',
 ];
+
 export const contactInfo = {
   name: 'Mohammad Haider',
   location: 'Lucknow, India',
@@ -93,4 +93,5 @@ export const contactInfo = {
   phone: '+91-6394309826',
   linkedin: 'https://www.linkedin.com/in/mohammad-haider-2b1154290/',
   github: 'https://github.com/Haider786x',
+  portfolio: 'https://haiderportfolioin.vercel.app',
 };

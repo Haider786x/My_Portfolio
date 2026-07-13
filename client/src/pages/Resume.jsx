@@ -78,6 +78,11 @@ export default function Resume() {
                 <GithubIcon size={12} />
                 GitHub
               </a>
+              <span className="hidden sm:inline">•</span>
+              <a href={contactInfo.portfolio} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-accent print:text-black print:no-underline">
+                <span className="font-serif font-bold text-3xs">MH</span>
+                Portfolio
+              </a>
             </div>
           </div>
 
@@ -159,6 +164,24 @@ export default function Resume() {
               <div>
                 <div className="flex justify-between items-start gap-4 mb-1">
                   <h3 className="text-sm font-bold print:text-black">
+                    Code Wars
+                  </h3>
+                  <span className="font-mono text-2xs text-[#777] print:text-black">2026</span>
+                </div>
+                <p className="text-2xs font-mono text-[#999] print:text-black/70 mb-2">
+                  Tech Stack: Node.js, Express, Socket.IO, MongoDB, Redis, BullMQ, Gemini API, Monaco Editor
+                </p>
+                <ul className="list-disc pl-4 space-y-1 text-xs text-[#888] print:text-black/80">
+                  <li>Built a real-time competitive programming platform for 1v1 coding matches with live editor synchronization using Socket.IO.</li>
+                  <li>Engineered a dedicated sandboxed code execution microservice to securely test user submissions and provide instant algorithmic feedback.</li>
+                  <li>Implemented Redis-backed BullMQ queues to scale concurrent code executions, manage delay timers, and handle pub-sub socket fanout.</li>
+                  <li>Integrated Google Gemini API to automatically generate post-match AI code reviews and personalized feedback.</li>
+                </ul>
+              </div>
+
+              <div>
+                <div className="flex justify-between items-start gap-4 mb-1">
+                  <h3 className="text-sm font-bold print:text-black">
                     Gaffer Desk
                   </h3>
                   <span className="font-mono text-2xs text-[#777] print:text-black">2026</span>
@@ -171,25 +194,6 @@ export default function Resume() {
                   <li>Integrated Google Gemini Vision API to extract player names, positions, and ratings from uploaded in-game screenshots.</li>
                   <li>Developed a tactical pitch visualization system with dynamic formation mapping using React and CSS grid layouts.</li>
                   <li>Implemented squad analytics including player growth tracking, tactical alerts, and AI-generated squad recommendations.</li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="flex justify-between items-start gap-4 mb-1">
-                  <h3 className="text-sm font-bold print:text-black">
-                    My-Day
-                  </h3>
-                  <span className="font-mono text-2xs text-[#777] print:text-black">2026</span>
-                </div>
-                <p className="text-2xs font-mono text-[#999] print:text-black/70 mb-2">
-                  Tech Stack: MERN, Redux Toolkit, JWT, Tailwind CSS, MongoDB
-                </p>
-                <ul className="list-disc pl-4 space-y-1 text-xs text-[#888] print:text-black/80">
-                  <li>Developed a secure digital journaling platform for creating, editing, and organizing personal journal entries.</li>
-                  <li>Implemented JWT authentication with secure HTTP-only cookies, protected routes, and server-side validation.</li>
-                  <li>Built responsive user interfaces using React, Tailwind CSS, DaisyUI, and Redux Toolkit with RTK Query.</li>
-                  <li>Designed RESTful backend APIs using Node.js, Express.js, and MongoDB for scalable journal management.</li>
-                  <li>Optimized user experience with clean UI architecture and seamless CRUD functionality across authenticated sessions.</li>
                 </ul>
               </div>
             </div>

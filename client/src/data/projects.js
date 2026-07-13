@@ -132,6 +132,33 @@ export const projects = [
     featured: true,
     color: '#1a666b',
   },
+  {
+    id: 'code-wars',
+    title: 'Code Wars',
+    tagline: 'Real-time 1v1 competitive programming platform and match-maker.',
+    description:
+      'A real-time, head-to-head 1v1 competitive programming platform. Create rooms, challenge peers, and write code in sync with your opponent. Matches run securely on an isolated runner with instant feedback, live spectating, and post-match AI-powered feedback.',
+    problem:
+      'Designing a low-latency collaborative environment requires keeping multiplayer state synchronized in real-time, executing untrusted user code safely without public API rate-limits, and scaling web socket messaging across multiple servers.',
+    approach:
+      'Architected a highly responsive real-time platform using Socket.io and Monaco Editor. Employed Upstash Redis as a pub-sub broker to scale socket events horizontally, BullMQ for job scheduling, and connected a custom CodeSandboxer microservice for sandboxed execution.',
+    implementation: [
+      'Built a real-time Monaco editor synchronization engine using Socket.io and unified storage configuration events.',
+      'Designed a Redis-backed scaling layer using pub-sub communication to sync match states across independent API instances.',
+      'Integrated BullMQ queues to handle match timing lifecycles, submission timeouts, and asynchronous job processing.',
+      'Configured code execution through the custom CodeSandboxer microservice, running submissions in isolated, resource-constrained containers.',
+      'Integrated Google Gemini AI key workflows to perform detailed post-match code reviews and ELO-sensitive ELO adjustments.',
+      'Created an ELO ranking database logic with automatic 24-hour cleanup cron tasks for guest matches.',
+    ],
+    outcome:
+      'Shipped a production-ready real-time multiplayer programming environment deployed on Vercel and Render, utilizing MongoDB Atlas and serverless Redis queues.',
+    stack: ['React', 'Node.js', 'Express.js', 'Socket.io', 'Redis', 'MongoDB', 'Gemini API'],
+    status: 'completed',
+    liveUrl: 'https://code-wars-theta.vercel.app/',
+    githubUrl: 'https://github.com/Haider786x/Code_Wars',
+    featured: true,
+    color: '#c21a1a',
+  },
 ];
 
 export const getProjectById = (id) => projects.find((p) => p.id === id);
